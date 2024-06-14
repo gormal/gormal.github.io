@@ -1,49 +1,119 @@
 @tailwind base;
+
 @layer base {
-    html{
-        @apply bg-white dark:bg-gray-950;
-    }
-    h1 {
-        @apply text-4xl font-bold;
+    html {
+        @apply bg-light-primary dark:bg-dark-primary;
     }
 
-    h2 {
-        @apply text-2xl font-bold;
+    article {
+        @apply leading-normal break-words dark:text-dark-text-primary;
     }
 
-    h3 {
-        @apply text-xl font-bold;
+    article>*+* {
+        @apply mt-0 mb-4;
     }
 
-    .content h1,
-    .content h2,
-    .content h3,
-    .content p,
-    .content img {
-        @apply my-6;
+    article li+li {
+        @apply mt-1;
     }
 
-    .content ul {
-        @apply my-6 pl-5 list-disc;
+    article li>p+p {
+        @apply mt-6;
     }
 
-    .content ol {
-        @apply my-6 pl-5 list-decimal;
+    article strong {
+        @apply font-semibold;
     }
 
-    li {
-        @apply my-4;
+    article a:not([href^="#"]) {
+        @apply font-semibold;
     }
 
-    @media (min-width: 768px) {
-        h1 {
-            @apply text-6xl font-bold;
-        }
+    article strong a {
+        @apply font-bold;
+    }
 
-        h2 {
-            @apply text-4xl font-bold;
-        }
+    article h1 {
+        @apply leading-tight border-b text-4xl font-semibold mb-4 mt-6 pb-2;
+    }
+
+    article h2 {
+        @apply leading-tight border-b text-2xl font-semibold mb-4 mt-6 pb-2;
+    }
+
+    article h3 {
+        @apply leading-snug text-lg font-semibold mb-4 mt-6;
+    }
+
+    article h4 {
+        @apply leading-none text-base font-semibold mb-4 mt-6;
+    }
+
+    article h5 {
+        @apply leading-tight text-sm font-semibold mb-4 mt-6;
+    }
+
+    article h6 {
+        @apply leading-tight text-sm font-semibold;
+    }
+
+    article blockquote {
+        @apply text-base border-l-4 pl-4 pr-4;
+    }
+
+    article pre {
+        @apply border-l-2 p-4 border-gray-300;
+        counter-reset: step;
+        counter-increment: step 0;
+    }
+
+    article pre .line::before {
+        content: counter(step);
+        counter-increment: step;
+        @apply w-4 mr-6 inline-block text-right;
+    }
+
+    article ul {
+        @apply text-base pl-8 list-disc;
+    }
+
+    article ol {
+        @apply text-base pl-8 list-decimal;
+    }
+
+    article kbd {
+        @apply text-xs inline-block rounded border px-1 align-middle font-normal font-mono shadow;
+    }
+
+    article table {
+        @apply text-base;
+    }
+
+    article th {
+        @apply border py-1 px-3;
+    }
+
+    article td {
+        @apply border py-1 px-3;
+    }
+
+    article ul li:has(input[type="checkbox"]) {
+        @apply list-none; 
+    }
+
+    article ul li input[type="checkbox"] {
+        @apply relative w-4 h-4 appearance-none border border-gray-300 rounded-sm mb-2 ml-[-1.7em] float-left;
+    }
+
+    article input[type="checkbox"]:checked::before {
+        content: '✓';
+        @apply text-[1.1em] font-bold absolute left-[0.1em] bottom-[-0.2em];
+    }
+
+    article input[type="checkbox"]~label {
+        @apply block w-full mb-[0.1em];
     }
 }
+
 @tailwind components;
 @tailwind utilities;

@@ -16,10 +16,15 @@ export default defineNuxtConfig({
     content: {
         // https://content.nuxtjs.org/api/configuration
         highlight: {
-            theme: 'github-dark',
-            preload: ['java', 'javascript']
+            theme: {
+                // Default theme (same as single string)
+                default: 'light-plus',
+                // Theme used if `html.dark`
+                dark: 'dark-plus',
+            },
+            preload: ['csharp', 'javascript', 'diff']
         },
-          experimental: {
+        experimental: {
             search: {
                 indexed: true,
                 options:

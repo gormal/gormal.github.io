@@ -15,6 +15,6 @@ useHead({
   meta: [
     { name: 'description', content: 'Personal blog site.' }
   ],
-  // script: [{ children: "const colorScheme = localStorage.getItem('vueuse-color-scheme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); document.documentElement.setAttribute('theme', colorScheme)" }],
+  htmlAttrs: { lang: "en-gb"}
 })
 </script>

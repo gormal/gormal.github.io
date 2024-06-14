@@ -15,12 +15,22 @@ module.exports = {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "xl": "1400px",
       },
     },
     extend: {
+      screens: {
+        sm: '480px',
+        md: '768px',
+        lg: '976px',
+        xl: '1440px',
+      },
       colors:{
-        black: '#393939'
+        'light-primary': '#FFFFFF',
+        'light-secondary': '#F9F9F9',
+        'dark-primary': '#040418',
+        'dark-secondary': '#001827',
+        'dark-text-primary': '#F3F3F3',
       },
       keyframes: {
         "accordion-down": {

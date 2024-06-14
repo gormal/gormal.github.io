@@ -18,3 +18,6 @@ could be fix with prerender:routes?
 
 ### each md file needs to have a title to be included in the index
 https://github.com/nuxt/content/blob/main/src/runtime/server/search.ts#L29
+
+### timeline
+https://codepen.io/k950212/pen/JjejegX

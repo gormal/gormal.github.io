@@ -7,6 +7,7 @@ description: "Forgiveness is a powerful tool for healing and personal growth. Wh
 
 # How Letting Go of Resentment Can Improve Your Life
 
+## Intro
 Forgiveness is a powerful tool for healing and personal growth. While it can be difficult to forgive someone who has hurt us, holding onto resentment and anger can have a range of negative effects on our mental and physical well-being. Here are some ways that forgiveness can improve your life:
 
 * Reduced stress and anxiety: Holding onto anger and resentment can cause chronic stress, which can have a range of negative effects on the body and mind. By practicing forgiveness, you can reduce stress and promote a sense of calm.

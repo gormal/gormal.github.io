@@ -28,9 +28,11 @@ module.exports = {
       colors:{
         'light-primary': '#FFFFFF',
         'light-secondary': '#F9F9F9',
+        'light-text-primary': '#000000',
         'dark-primary': '#040418',
         'dark-secondary': '#001827',
         'dark-text-primary': '#F3F3F3',
+        'dark-text-secondary': '#F9F9F9',
       },
       keyframes: {
         "accordion-down": {

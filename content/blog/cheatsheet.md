@@ -4,7 +4,7 @@ author: "John Doe"
 date: "Aug 14, 2023"
 description: "Example of md to test formating"
 ---
-# heading 1
+# Cheatsheet
 ## heading 2
 ### heading 3
 #### heading 4

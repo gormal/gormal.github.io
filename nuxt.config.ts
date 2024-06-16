@@ -1,4 +1,7 @@
 import TimeToRead from './modules/time-to-read/module'
+import { promises as fs } from 'fs'
+import path from 'path'
+import slugify from 'slugify'
 
 export default defineNuxtConfig({
     modules: ['@nuxtjs/tailwindcss', TimeToRead, '@nuxt/content', 'shadcn-nuxt', '@nuxtjs/color-mode'],
@@ -9,17 +12,17 @@ export default defineNuxtConfig({
     },
     router: {
         options: {
-            strict: false
+            strict: true
         }
+    },
+    features: {
+        inlineStyles: false,
     },
     sourcemap: false,
     content: {
-        // https://content.nuxtjs.org/api/configuration
         highlight: {
             theme: {
-                // Default theme (same as single string)
                 default: 'light-plus',
-                // Theme used if `html.dark`
                 dark: 'dark-plus',
             },
             preload: ['csharp', 'javascript', 'diff']
@@ -30,7 +33,7 @@ export default defineNuxtConfig({
                 options:
                 {
                     fields: ['title', 'content', 'titles', 'level'],
-                    storeFields: ['title', 'content'],
+                    storeFields: ['title', 'titles', 'level'],
                     searchOptions: {
                         prefix: true,
                         fuzzy: 0.2,
@@ -50,5 +53,19 @@ export default defineNuxtConfig({
     },
     colorMode: {
         classSuffix: ''
+    },
+    hooks: {
+        'prerender:routes': async function (ctx) {
+            const blogDir = path.resolve(__dirname, 'content/blog')
+            const files = await fs.readdir(blogDir)
+            
+            const blogRoutes = files
+                .filter(file => file.endsWith('.md'))
+                .map(file => {
+                    const routeName = slugify(path.basename(file, '.md'), { lower: true})
+                    return `/blog/${routeName}`
+                })
+            blogRoutes.forEach(route => ctx.routes.add(route))
+        }
     }
 });

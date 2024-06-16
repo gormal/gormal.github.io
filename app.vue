@@ -1,9 +1,9 @@
 <template>
-  <main class="flex max-w-screen-xl mx-auto px-4 sm:px-6 xl:px-10 py-5 xl:py-10 text-base text-black ">
-    <div class="w-1/4">
+  <main class="flex flex-col md:flex-row text-base text-light-text-primary dark:text-dark-text-primary h-screen">
+    <div class="pb-8 md:w-1/4 md:pb-0">
       <Menu />
     </div>
-    <div class="w-3/4">
+    <div class="md:w-3/4 overflow-y-auto scrollbar px-10">
       <NuxtPage />
     </div>
   </main>

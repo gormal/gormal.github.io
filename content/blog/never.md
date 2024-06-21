@@ -1,7 +1,7 @@
 ---
 title: "Never do it again"
 author: "John Doe"
-date: "Jun 21, 2023"
+date: "Sep 21, 2024"
 description: "Hardly searchable."
 ---
 

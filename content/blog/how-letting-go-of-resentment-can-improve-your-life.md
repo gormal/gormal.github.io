@@ -1,7 +1,7 @@
 ---
 title: "How Letting Go of Resentment Can Improve Your Life"
 author: "John Doe"
-date: "Aug 14, 2023"
+date: "Aug 14, 2024"
 description: "Forgiveness is a powerful tool for healing and personal growth. While it can be difficult to forgive someone who has hurt us, holding onto resentment and anger can have a range of negative effects on our mental and physical well-being."
 ---
 

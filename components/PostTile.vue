@@ -2,7 +2,7 @@
     <div>
         <a :href="article.path">
             <div class="space-y-4 p-6 hover:bg-gray-200/50 dark:hover:bg-gray-800/50">
-                <h3 class="text-black dark:text-gray-300 text-xl font-semibold group-hover:text-primary">{{
+                <h3 class="text-xl font-semibold">{{
                     article.title }}</h3>
                 <p class="text-gray-500 dark:text-gray-400">{{ article.description }}</p>
                 <div class="flex items-center justify-between">

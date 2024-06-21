@@ -1,3 +1,0 @@
-<template>
-    neco malo
-</template>

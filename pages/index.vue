@@ -3,5 +3,5 @@
 </template>
 
 <script setup lang="ts">
-const articles : ArticleMetadata[] = await getNewestArticlesMetadata(-1);
+const articles: ArticleMetadata[] = await getNewestArticlesMetadata(4);
 </script>

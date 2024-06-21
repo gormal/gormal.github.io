@@ -32,7 +32,7 @@ module.exports = {
         'dark-primary': '#040418',
         'dark-secondary': '#001827',
         'dark-text-primary': '#F3F3F3',
-        'dark-text-secondary': '#F9F9F9',
+        'dark-text-secondary': '#F9F9F9'
       },
       keyframes: {
         "accordion-down": {
